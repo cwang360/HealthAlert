@@ -343,7 +343,24 @@ class _MainMenuState extends State<MainMenu> {
           ),
         ),
         Align(
-          alignment: Alignment(0.0, 0.40),
+            alignment: Alignment(0.0, 0.7),
+            child: FlatButton(
+              child: Image.asset(
+                "assets/images/GeoReminderIcon.png",
+                width: 125,
+                height: 125,
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(seconds: 1),
+                        child: GeoReminders()));
+              },
+            )),
+        Align(
+          alignment: Alignment(0.0, 0.89),
           child: FlatButton(
             child: Text("SET LOCATION REMINDERS",
                 style: TextStyle(
@@ -371,12 +388,29 @@ class _MainMenuState extends State<MainMenu> {
           ),
         ),
         Align(
-          alignment: Alignment(0.0, .6),
+            alignment: Alignment(0.8, 0.05),
+            child: FlatButton(
+              child: Image.asset(
+                "assets/images/GeofencingIcon.png",
+                width: 125,
+                height: 125,
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(seconds: 1),
+                        child: GeoInputPage()));
+              },
+            )),
+        Align(
+          alignment: Alignment(0.90, .35),
           child: FlatButton(
-            child: Text("SET UP GEOFENCES",
+            child: Text("    SET UP\nGEOFENCES",
                 style: TextStyle(
                   color: Colors.blue,
-                  fontSize: 30,
+                  fontSize: 25,
                 )),
             onPressed: () {
               Navigator.push(
@@ -389,12 +423,29 @@ class _MainMenuState extends State<MainMenu> {
           ),
         ),
         Align(
-          alignment: Alignment(0.0, 0.25),
+            alignment: Alignment(-0.8, 0.05),
+            child: FlatButton(
+              child: Image.asset(
+                "assets/images/ReminderIcon.png",
+                width: 150,
+                height: 150,
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(seconds: 1),
+                        child: ReminderPage()));
+              },
+            )),
+        Align(
+          alignment: Alignment(-0.8, 0.29),
           child: FlatButton(
             child: Text("REMINDERS",
                 style: TextStyle(
                   color: Colors.blue,
-                  fontSize: 30,
+                  fontSize: 25,
                 )),
             onPressed: () {
               Navigator.push(
@@ -406,6 +457,23 @@ class _MainMenuState extends State<MainMenu> {
             },
           ),
         ),
+        Align(
+            alignment: Alignment(0.0, -0.6),
+            child: FlatButton(
+              child: Image.asset(
+                "assets/images/hai.png",
+                width: 150,
+                height: 150,
+              ),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.fade,
+                        duration: Duration(seconds: 1),
+                        child: StatusPage()));
+              },
+            )),
         Align(
           alignment: Alignment(0.0, 0 - .25),
           child: FlatButton(
