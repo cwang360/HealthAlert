@@ -1,5 +1,5 @@
 # HealthAlert
-Safety health wearable tailored to the elderly, people with dangerous health conditions, and people who suffer from memory loss.
+Safety health wearable and app tailored to the elderly, people with dangerous health conditions, and people who suffer from memory loss.
 
 Many of our grandparents or parents may live alone, and their safety is our first priority. As people get older, they are more susceptible to dangerous health conditions and memory loss. HealthAlert helps them take care of themselves in different environments, like hot or humid climates, and immediately alert close family members if the wearable detects alarming events, like a seizure or fall.
 
