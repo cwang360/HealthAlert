@@ -5,12 +5,9 @@ import 'package:page_transition/page_transition.dart';
 
 import 'dart:async';
 import 'dart:isolate';
-import 'dart:io';
 
 //background packages
-import 'package:path_provider/path_provider.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
-import 'package:workmanager/workmanager.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 //geo packages
@@ -56,24 +53,24 @@ FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 
 //where WorkManager tasks are executed. Deprecated
 void callbackDispatcher() {
-  Workmanager.executeTask((task, inputData) async {
-    switch (task) {
-      case reminder:
-        print("$reminder executed");
-        break;
-      case remind_later:
-        print("$remind_later executed");
-        break;
-      case remind_short:
-        print("$remind_short executed");
-        break;
-      case Workmanager.iOSBackgroundTask:
-        print("The iOS background fetch was triggered");
-        Directory tempDir = await getTemporaryDirectory();
-        String tempPath = tempDir.path;
-        print(
-            "You can access other plugins in the background, for example Directory.getTemporaryDirectory(): $tempPath");
-        break;
+//   Workmanager.executeTask((task, inputData) async {
+//     switch (task) {
+//       case reminder:
+//         print("$reminder executed");
+//         break;
+//       case remind_later:
+//         print("$remind_later executed");
+//         break;
+//       case remind_short:
+//         print("$remind_short executed");
+//         break;
+//       case Workmanager.iOSBackgroundTask:
+//         print("The iOS background fetch was triggered");
+//         Directory tempDir = await getTemporaryDirectory();
+//         String tempPath = tempDir.path;
+//         print(
+//             "You can access other plugins in the background, for example Directory.getTemporaryDirectory(): $tempPath");
+//         break;
     }
 
     return Future.value(true);
@@ -239,11 +236,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 //change this to ontap
                 onPressed: () {
-                  Workmanager.initialize(
-                    callbackDispatcher,
-                    isInDebugMode: true,
-                  );
-                  print("WorkManager Online");
+//                   Workmanager.initialize(
+//                     callbackDispatcher,
+//                     isInDebugMode: true,
+//                   );
+//                   print("WorkManager Online");
                   Navigator.push(
                       context,
                       PageTransition(
