@@ -405,7 +405,7 @@ class _MainMenuState extends State<MainMenu> {
           child: Text(
             "HealthAlert",
             style: TextStyle(
-              fontSize: 50,
+              fontSize: 60,
               color: Colors.red,
             ),
           ),
