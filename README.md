@@ -16,7 +16,7 @@ The main goal of HealthAlert is to help those susceptible to medical conditions 
 - The app was created in Flutter, and the flutter_reactive_ble package was used to communicate with the Arduino through Bluetooth Low Energy. The app is user-friendly and displays current temperature/humidity data and status information (fall/seizure/weather). In the settings menu, the user can add the phone number to send an SMS to when a fall or seizure is detected. The sms_maintained package is used to automatically send the SMS.
 
 ## In This Repository
-- The Arduino sketch for the Arduino Nano 33 BLE Sense is found in the bluetooth_wearable_combined folder. The model.h file contains the trained model for classifying severe tremors.
+- The Arduino sketch for the Arduino Nano 33 BLE Sense is found in the bluetooth_wearable_combined folder. The model.h file is the header file that contains the trained model for classifying severe tremors.
 - The Flutter project is found in the bluetooth_app folder.
 
 ***This project was submitted to the HackUMass hackathon in December 2020.***
