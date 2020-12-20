@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "534361650055",
+    "project_id": "wearablebutler",
+    "storage_bucket": "wearablebutler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534361650055:android:7e7671ede0b2f4c10c5922",
+        "android_client_info": {
+          "package_name": "com.example.wearable_butler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534361650055-9iis8r3bme5okdg3v8j97npoblir9pod.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wearable_butler",
+            "certificate_hash": "707b6b9371b69b1cb1d27d40c53982f4448b9bce"
+          }
+        },
+        {
+          "client_id": "534361650055-pjn9udc59lho741b1dhtrgrpf0jjq1uq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLh7UyagXPmi6qkETg7-wpkrkKDJadHR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534361650055-pjn9udc59lho741b1dhtrgrpf0jjq1uq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
