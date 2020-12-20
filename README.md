@@ -17,6 +17,6 @@ The main goal of HealthAlert is to help those susceptible to medical conditions 
 
 ## In This Repository
 - The Arduino sketch for the Arduino Nano 33 BLE Sense is found in the bluetooth_wearable_combined folder. The model.h file is the header file that contains the trained model for classifying severe tremors.
-- The Flutter project is found in the bluetooth_app folder.
+- The Flutter project is found in the wearable_butler_app folder.
 
 ***This project was submitted to the HackUMass hackathon in December 2020.***
