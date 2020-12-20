@@ -603,12 +603,24 @@ class _ReminderPageState extends State<ReminderPage> {
         body: Stack(
       children: <Widget>[
         Align(
-          alignment: Alignment(0.0, -0.8),
-          child: Text("Set up a reminder"),
+          alignment: Alignment(0.0, -0.85),
+          child: Text(
+            "Set up a reminder",
+            style: TextStyle(
+              color: Colors.blue,
+              fontSize: 25,
+            ),
+          ),
         ),
         Align(
           alignment: Alignment(-.9, -0.7),
-          child: Text("Type Message Below"),
+          child: Text(
+            "Type Message Below",
+            style: TextStyle(
+              color: Colors.redAccent,
+              fontSize: 13,
+            ),
+          ),
         ),
         Align(
           alignment: Alignment(0.0, -0.6),
@@ -624,10 +636,24 @@ class _ReminderPageState extends State<ReminderPage> {
           ),
         ),
         Align(
-          alignment: Alignment(-.8, -0.4),
+          alignment: Alignment(0.0, -0.42),
           child: Text(
-              "Type in the times (in Military or Digital) you would like to be reminded(spaces in between each time)"),
+            "Type in the times (in Military or Digital) you would like tobe reminded(spaces in between each time)",
+            style: TextStyle(
+              color: Colors.redAccent,
+              fontSize: 13,
+            ),
+          ),
         ),
+        Align(
+            alignment: Alignment(0.0, -0.17),
+            child: Text(
+              "How many days would you like this reminder to go on for?",
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontSize: 13,
+              ),
+            )),
         Align(
           alignment: Alignment(0.0, -0.3),
           child: TextField(
@@ -657,7 +683,13 @@ class _ReminderPageState extends State<ReminderPage> {
         Align(
             alignment: Alignment(0.0, 0.1),
             child: RaisedButton(
-              child: Text("Create notification"),
+              child: Text(
+                "Create notification",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 15,
+                ),
+              ),
               onPressed: () {
                 scheduleNotificationsConsecutively();
               },
@@ -690,44 +722,6 @@ class NewScreen extends StatelessWidget {
   }
 }
 
-// class StatusPage extends StatefulWidget {
-//   @override
-//   _StatusPageState createState() => _StatusPageState();
-// }
-
-// //This displays vitals associated with the wearable device
-// class _StatusPageState extends State<StatusPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         body: Stack(
-//       children: <Widget>[
-//         Align(
-//           alignment: Alignment(0.0, -0.8),
-//           child: Text("Humidity here"),
-//         ),
-//         Align(
-//           alignment: Alignment(0.0, -0.7),
-//           child: Text("Temperature here"),
-//         ),
-//         Align(
-//           alignment: Alignment(0.0, -0.6),
-//           child: Text("Falling here"),
-//         ),
-//         Align(
-//           alignment: Alignment(1, 1),
-//           child: FlatButton(
-//             child: Text("Back", style: TextStyle(color: Colors.blue)),
-//             onPressed: () {
-//               Navigator.pop(context);
-//             },
-//           ),
-//         ),
-//       ],
-//     ));
-//   }
-// }
-
 class GeoReminders extends StatefulWidget {
   @override
   _GeoRemindersState createState() => _GeoRemindersState();
@@ -757,8 +751,14 @@ class _GeoRemindersState extends State<GeoReminders> {
       body: Stack(
         children: <Widget>[
           Align(
-            alignment: Alignment(0.0, -0.8),
-            child: Text("Set reminders for a location"),
+            alignment: Alignment(0.0, -0.85),
+            child: Text(
+              "Set reminders for a location",
+              style: TextStyle(
+                color: Colors.redAccent,
+                fontSize: 25,
+              ),
+            ),
           ),
           Align(
               alignment: Alignment(0.0, -0.7),
@@ -773,7 +773,13 @@ class _GeoRemindersState extends State<GeoReminders> {
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
-                    child: Text(value),
+                    child: Text(
+                      value,
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 15,
+                      ),
+                    ),
                   );
                 }).toList(),
               )),
@@ -804,14 +810,26 @@ class _GeoRemindersState extends State<GeoReminders> {
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
-                    child: Text(value),
+                    child: Text(
+                      value,
+                      style: TextStyle(
+                        color: Colors.blue,
+                        fontSize: 15,
+                      ),
+                    ),
                   );
                 }).toList(),
               )),
           Align(
             alignment: Alignment(0.0, 0.0),
             child: RaisedButton(
-              child: Text("Set reminder"),
+              child: Text(
+                "Set reminder",
+                style: TextStyle(
+                  color: Colors.redAccent,
+                  fontSize: 15,
+                ),
+              ),
               onPressed: () {
                 storeGeoMessage();
               },
@@ -857,20 +875,29 @@ class _GeoInputPageState extends State<GeoInputPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Test the making and removal of geofences'),
-        ),
         body: Container(
             padding: const EdgeInsets.all(20.0),
             child: Stack(children: <Widget>[
               Align(
-                alignment: Alignment(0.0, -.7),
-                child: Text('Current state: $geofenceState'),
+                alignment: Alignment(0.0, -.92),
+                child: Text(
+                  "Input coordinates below",
+                  style: TextStyle(
+                    color: Colors.redAccent,
+                    fontSize: 25,
+                  ),
+                ),
               ),
               Align(
-                alignment: Alignment(0.0, -0.6),
+                alignment: Alignment(0.0, 0.05),
                 child: RaisedButton(
-                  child: const Text('Register'),
+                  child: const Text(
+                    'Register',
+                    style: TextStyle(
+                      color: Colors.redAccent,
+                      fontSize: 15,
+                    ),
+                  ),
                   onPressed: () {
                     if (latitude == null) {
                       setState(() => latitude = 0.0);
@@ -898,25 +925,21 @@ class _GeoInputPageState extends State<GeoInputPage> {
                 ),
               ),
               Align(
-                alignment: Alignment(0.0, -0.4),
+                alignment: Alignment(0.0, 0.8),
                 child: Text('Registered Geofences: $registeredGeofences'),
               ),
               Align(
-                alignment: Alignment(0.0, -0.25),
-                child: RaisedButton(
-                  child: const Text('Unregister'),
-                  onPressed: () =>
-                      GeofencingManager.removeGeofenceById('default').then((_) {
-                    GeofencingManager.getRegisteredGeofenceIds().then((value) {
-                      setState(() {
-                        registeredGeofences = value;
-                      });
-                    });
-                  }),
+                alignment: Alignment(-1.0, -0.8),
+                child: Text(
+                  "Latitude",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                  ),
                 ),
               ),
               Align(
-                alignment: Alignment(0.0, -0.1),
+                alignment: Alignment(0.0, -0.75),
                 child: TextField(
                   decoration: const InputDecoration(
                     hintText: 'Latitude',
@@ -929,7 +952,17 @@ class _GeoInputPageState extends State<GeoInputPage> {
                 ),
               ),
               Align(
-                alignment: Alignment(0.0, 0.1),
+                alignment: Alignment(-1.0, -.6),
+                child: Text(
+                  "Longitude",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.0, -.55),
                 child: TextField(
                     decoration: const InputDecoration(hintText: 'Longitude'),
                     keyboardType: TextInputType.number,
@@ -940,7 +973,17 @@ class _GeoInputPageState extends State<GeoInputPage> {
                     }),
               ),
               Align(
-                alignment: Alignment(0.0, 0.30),
+                alignment: Alignment(-1.0, -.4),
+                child: Text(
+                  "Radius",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.0, -.35),
                 child: TextField(
                     decoration: const InputDecoration(hintText: 'Radius'),
                     keyboardType: TextInputType.number,
@@ -950,7 +993,17 @@ class _GeoInputPageState extends State<GeoInputPage> {
                     }),
               ),
               Align(
-                alignment: Alignment(0.0, 0.5),
+                alignment: Alignment(-1.0, -.2),
+                child: Text(
+                  "Name of Location",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.0, -.13),
                 child: TextField(
                     decoration: const InputDecoration(hintText: 'Name'),
                     keyboardType: TextInputType.name,
@@ -960,16 +1013,32 @@ class _GeoInputPageState extends State<GeoInputPage> {
                     }),
               ),
               Align(
-                alignment: Alignment(0.0, -.9),
+                alignment: Alignment(-1.0, 1.0),
                 child: RaisedButton(
-                    child: Text("Remove all geofences"),
+                    child: Text(
+                      "Remove all geofences",
+                      style: TextStyle(
+                        color: Colors.redAccent,
+                        fontSize: 15,
+                      ),
+                    ),
                     onPressed: () {
                       print("button pressed");
                       _removeAllFences();
                     }),
               ),
               Align(
-                alignment: Alignment(0.0, 0.8),
+                alignment: Alignment(-1.0, 0.2),
+                child: Text(
+                  "If not using coordinates, input address below",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.0, 0.3),
                 child: TextField(
                     decoration:
                         const InputDecoration(hintText: 'Input Address'),
@@ -980,9 +1049,15 @@ class _GeoInputPageState extends State<GeoInputPage> {
                     }),
               ),
               Align(
-                alignment: Alignment(0.0, 0.95),
+                alignment: Alignment(0.0, .47),
                 child: RaisedButton(
-                  child: Text("Register from address"),
+                  child: Text(
+                    "Register from address",
+                    style: TextStyle(
+                      color: Colors.redAccent,
+                      fontSize: 15,
+                    ),
+                  ),
                   onPressed: () => _addGeofenceFromAddress(address, radius),
                 ),
               ),
