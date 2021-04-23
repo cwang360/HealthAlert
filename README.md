@@ -1,3 +1,4 @@
+![HealthAlert graphic](https://github.com/cwang360/HealthAlert/blob/main/HealthAlert.png)
 # HealthAlert
 Safety health wearable and app tailored to the elderly, people with dangerous health conditions, and people who suffer from memory loss.
 
